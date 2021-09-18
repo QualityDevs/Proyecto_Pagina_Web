@@ -33,3 +33,5 @@ accesos al sistema de información.
 
 
 Las personas que van a desarrollar este proyecto son las siguientes:
+
+Administrador de BD: Sergio Andres Villamizar Arias: Tengo 26 años soy tecnologo en diseño e integración de automatismos mecatrónicos
