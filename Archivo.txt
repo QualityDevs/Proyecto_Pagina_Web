@@ -35,5 +35,5 @@ accesos al sistema de información.
 Las personas que van a desarrollar este proyecto son las siguientes:
 
 Administrador de BD: Sergio Andres Villamizar Arias: Tengo 26 años soy tecnologo en diseño e integración de automatismos mecatrónicos
-Product Owner: Linda Natalia Rodríguez Rincón: Tengo 31 años, profesional en Relaciones Internacionales, sin conocimientos previos sobre programación pero con el objetivo de adquirir nuevas habilidades.
+Product Owner: Linda Natalia Rodríguez Rincón: Tengo 31 años, profesional en Relaciones Internacionales, no tenia conocimientos previos sobre programación pero con el objetivo de adquirir nuevas habilidades.
 Analista: Laura Andrea Medina Sánchez: Tengo 23 años soy ingeniera electrónica, antes de estar en el curso de MisiónTIC tenía conocimientos mínimos de programación
