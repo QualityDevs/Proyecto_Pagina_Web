@@ -1,0 +1,45 @@
+/*Style for title and elements in center */
+.Center{
+    text-align: center;
+    align-self: center;
+    vertical-align: middle;
+}
+
+/*Style data of the table */
+.Data{
+   vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo{
+    height: 50px;
+}
+
+.containerMain{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: rgb(130, 160, 243);
+    border-bottom: 0.5px solid black;
+}
+
+.navbar > li{
+    display: flex;
+    align-items: flex-start;
+}
+
+.containerMain > main{
+    height: 100%;
+    overflow-y: scroll;
+}
