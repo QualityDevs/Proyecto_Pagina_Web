@@ -14,7 +14,7 @@ const Sidebar = () => {
             <ul>
 
                 <li>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#listProdcutos" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#listProductos" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <CgProductHunt className="boton" /> <a href="#" className="sletra"> Productos</a> <FiChevronDown className="boton" />
                     </button>
 
