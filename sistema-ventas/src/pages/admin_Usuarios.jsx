@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export const admin_Usuarios = () => {
+const AdminUsuarios = () => {
     return (
         <div>
             esta es la pagina de admin_Usuarios
         </div>
-    )
+    );
 }
+
+export default AdminUsuarios;
