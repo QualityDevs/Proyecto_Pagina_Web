@@ -41,12 +41,22 @@ const Sidebar = () => {
 
 
                 <li>
-                    <RiUserSettingsLine className="boton" /><a href="#" className="sletra"> Usuarios</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#listUsuarios" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <RiUserSettingsLine className="boton" /><a href="#" className="sletra"> Usuarios</a><FiChevronDown className="boton" />
+                    </button>
+
+                    <div class="collapse" id="listUsuarios" className="lista-desplegable">
+                        <div class="list-group">
+                            <li><a href="#" className="sletras"> Gestion de Usuarios</a></li>
+                        </div>
+                    </div>
+
                 </li>
 
-
                 <li>
+                    <button class="navbar-toggler" type="button">
                     <FiLogOut className="boton" /><a href="#" className="sletra"> Salir</a>
+                    </button>
                 </li>
 
             </ul>
