@@ -46,6 +46,15 @@ ul{
 }
 
 .form{
+
   justify-items: center;
     margin-bottom: 1%;
+}
+
+.Login{
+ 
+    text-align: center;
+    height: 100vh;
+    display: list-item;
+    
 }

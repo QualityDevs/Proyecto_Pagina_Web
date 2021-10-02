@@ -6,6 +6,7 @@ import  Admin  from './pages/admin';
 import  AdministracionVentas  from './pages/administracion_Ventas';
 import  Adminproductos  from './pages/admin_productos';
 import  AdminUsuarios  from './pages/admin_Usuarios';
+import LayoutLogin from './layouts/Layout Login';
 
 
 function App() {
@@ -13,7 +14,15 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-           <Route path={['/admin', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos', '/login']} exact>
+          <Route path={'/login'}>
+              <LayoutLogin>
+                 <Route path='/login'>
+              </Route>
+            </LayoutLogin>
+
+          </Route>
+           
+           <Route path={['/admin', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos']} exact>
             <Layout>
               <Switch>
 
@@ -29,9 +38,6 @@ function App() {
                   <AdminUsuarios />
                 </Route>
                 
-                <Route path='/login' exact>
-                  <Login/>
-                </Route>
               </Switch>
             </Layout>
           </Route>

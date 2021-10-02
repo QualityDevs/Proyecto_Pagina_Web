@@ -2,27 +2,27 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    return (
-        <div>
+  return (
+    <div className="Login">
 
-            <h4>
-            Iniciar Sesión
-            </h4>
+      <h4>
+        Iniciar Sesión
+      </h4>
 
-            <form >
+      <form >
         <div>
           <input
-            class= 'form'
+            class='form'
             type='email'
             placeholder='tunombre@tucorreo.com'
             required
           />
-          </div>
-          <div>
+        </div>
+        <div>
           <input
-          
+
             type='password'
-            placeholder= ' ********'
+            placeholder=' ********'
             required
           />
         </div>
@@ -44,11 +44,13 @@ const Login = () => {
         </div>
         <div>O</div>
         <div>
-          <button>Continua con google</button>
+          <Link to='/admin'>
+            <button type='submit'>Continua con google</button>
+          </Link>
         </div>
       </form>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Login;
