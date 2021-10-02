@@ -4,10 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import  Login  from './pages/login';
 import  Home  from './pages/home';
 import  AdministracionVentas  from './pages/administracion_Ventas';
-import  Adminproductos  from './pages/admin_productos';
+import  Adminproductos  from './pages/productos/admin_productos';
 import  AdminUsuarios  from './pages/admin_Usuarios';
 import LayoutLogin from './layouts/Layout Login';
 import RegistroVentas  from './pages/registro_Ventas';
+import Productos from './pages/productos/productos';
+import CrearProducto from './pages/productos/admin_crear_producto';
 
 function App() {
   return (
@@ -24,7 +26,7 @@ function App() {
 
           </Route>
            
-           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos', '/registro_Ventas']} exact>
+           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/productos/admin_productos', '/productos/productos', '/productos/admin_crear_producto','/registro_Ventas']} exact>
             <Layout>
               <Switch>
 
@@ -32,8 +34,16 @@ function App() {
                   <AdministracionVentas />
                 </Route>
 
-                <Route path='/admin_productos' exact>
+                <Route path='/productos/admin_productos' exact>
                   <Adminproductos />
+                </Route>
+
+                <Route path='/productos/productos' exact>
+                  <Productos />
+                </Route>
+
+                <Route path='/productos/admin_crear_producto' exact>
+                  <CrearProducto />
                 </Route>
 
                 <Route path='/admin_Usuarios' exact>
