@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
-    <div className="Login">
+    <div className="llogin">
 
       <h4>
         Iniciar Sesión
@@ -39,13 +40,13 @@ const Login = () => {
         </div>
         <div>
           <Link to='/admin'>
-            <button type='submit'>Iniciar Sesion</button>
+            <button class= 'border border-danger rounded ' type='submit'>Iniciar Sesion</button>
           </Link>
         </div>
         <div>O</div>
         <div>
           <Link to='/admin'>
-            <button type='submit'>Continua con google</button>
+            <button class= 'border border-danger rounded bg' type='submit ' ><FcGoogle/> Continua con google</button>
           </Link>
         </div>
       </form>
