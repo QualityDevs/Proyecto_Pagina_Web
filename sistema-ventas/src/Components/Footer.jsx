@@ -5,10 +5,10 @@ import '../styles/stylesc.css';
 const Footer = () => {
     return (
         <footer>
-    <div class="bg-light py-2">
-      <div class="container text-center">
-        <p class="text-muted mb-0 ">© 2021 <span>Zapatocas.</span> 2021 All rights reserved.</p>
-        <p class="text-muted mb-0 ">Designed by <span>QualityDevs</span></p>
+    <div className="bg-light py-2">
+      <div className="container text-center">
+        <p className="text-muted mb-0 ">© 2021 <span className="spanAncho">Zapatocas.</span> 2021 All rights reserved.</p>
+        <p className="text-muted mb-0 ">Designed by <span className="spanAncho">QualityDevs</span></p>
       </div>
     </div>
         </footer>

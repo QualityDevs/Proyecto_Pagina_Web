@@ -5,134 +5,134 @@ const AdminUsuarios = () => {
     return (
         <div className="container"> 
         <div className="item item-1">
-        <h2 >Usuarios</h2>
+        <h2 className="tablaH2">Usuarios</h2>
         </div>
             <div className="item item-2">
             <form>
-            <table >
+            <table className="tablaAzul">
             <thead>
             <tr> 
-                <th>Id usuario</th> 
-                <th>Nombre</th> 
-                <th>Estado</th>
-                <th>Rol</th> 
+                <th className="tablath">Id usuario</th> 
+                <th className="tablath">Nombre</th> 
+                <th className="tablath">Estado</th>
+                <th className="tablath">Rol</th> 
             </tr>
             </thead>
             <tbody>
             <tr> 
-                <td>1234567899</td> 
-                <td>Abella Herrera William Efrain</td>
-                <td>
-                    <select>
+                <td className="tablatd">1234567899</td> 
+                <td className="tablatd">Abella Herrera William Efrain</td>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Pendiente</option>
                         <option>Autorizado</option>
                         <option>No autorizado</option>
                     </select>
                 </td>
-                <td>
-                    <select>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Vendedor</option>
                         <option>Administrador</option>
                     </select>
                 </td>
             </tr>
             <tr> 
-                <td>4963579855</td>
-                <td>Alegria Fernandez Diego Alonso</td>
-                <td>
-                <select>
+                <td className="tablatd">1234567899</td> 
+                <td className="tablatd">Alegria Fernandez Diego Alonso</td>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Pendiente</option>
                         <option>Autorizado</option>
                         <option>No autorizado</option>
                     </select>
                 </td>
-                <td>
-                    <select>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Vendedor</option>
                         <option>Administrador</option>
                     </select>
                 </td>
             </tr>
             <tr> 
-                <td>5785433474</td>
-                <td>Arenas De Escobar Maria Margoth</td>
-                <td>
-                <select>
+                <td className="tablatd">1234567899</td> 
+                <td className="tablatd">Arenas De Escobar Maria Margoth</td>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Pendiente</option>
                         <option>Autorizado</option>
                         <option>No autorizado</option>
                     </select>
                 </td>
-                <td>
-                    <select>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Vendedor</option>
                         <option>Administrador</option>
                     </select>
                 </td>
             </tr>
             <tr> 
-                <td>2497291443</td>
-                <td>Cabrera Leyton Hernando</td>
-                <td>
-                <select>
+                <td className="tablatd">1234567899</td> 
+                <td className="tablatd">Cabrera Leyton Hernando</td>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Pendiente</option>
                         <option>Autorizado</option>
                         <option>No autorizado</option>
                     </select>
                 </td>
-                <td>
-                    <select>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Vendedor</option>
                         <option>Administrador</option>
                     </select>
                 </td>
             </tr>
             <tr> 
-                <td>1234567899</td>
-                <td>Egas Realpe Mauro Alberto</td>
-                <td>
-                <select>
+                <td className="tablatd">1234567899</td> 
+                <td className="tablatd">Egas Realpe Mauro Alberto</td>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Pendiente</option>
                         <option>Autorizado</option>
                         <option>No autorizado</option>
                     </select>
                 </td>
-                <td>
-                    <select>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Vendedor</option>
                         <option>Administrador</option>
                     </select>
                 </td>
             </tr>
             <tr> 
-                <td>1474509792</td>
-                <td>Grijalba Gomez Pedro Felipe</td>
-                <td>
-                <select>
+                <td className="tablatd">1234567899</td> 
+                <td className="tablatd">Grijalba Gomez Pedro Felipe</td>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Pendiente</option>
                         <option>Autorizado</option>
                         <option>No autorizado</option>
                     </select>
                 </td>
-                <td>
-                    <select>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Vendedor</option>
                         <option>Administrador</option>
                     </select>
                 </td>
             </tr>
             <tr> 
-                <td>1234567899</td>
-                <td>Hidalgo Otero Ana Liliana</td>
-                <td>
-                <select>
+                <td className="tablatd">1234567899</td> 
+                <td className="tablatd">Hidalgo Otero Ana Liliana</td>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Pendiente</option>
                         <option>Autorizado</option>
                         <option>No autorizado</option>
                     </select>
                 </td>
-                <td>
-                    <select>
+                <td className="tablatd">
+                    <select className="tablaSelect">
                         <option>Vendedor</option>
                         <option>Administrador</option>
                     </select>

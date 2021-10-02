@@ -1,5 +1,5 @@
 
-table {     
+.tablaAzul {     
     font-family: var(--bs-body-font-family);
     font-size: 1rem;    
     margin: 25px 45px 45px 65px;     
@@ -8,7 +8,7 @@ table {
     border-collapse: collapse;
 }
 
-th {     
+.tablath {     
     font-family: var(--bs-body-font-family);
     font-size: 1.1rem;     
     font-weight: normal;     
@@ -19,7 +19,7 @@ th {
     color: #003177;
 }
 
-td {    
+.tablatd {    
     padding: 8px;     
     background: #e8edff;     
     border-bottom: 1px solid #fff;
@@ -27,9 +27,9 @@ td {
     border-top: 1px solid transparent; 
 }
 
-tr:hover td { background: #d0dafd; color: #339; }
+tr:hover .tablatd  { background: #d0dafd; color: #339; }
 
-select{
+.tablaSelect{
     font-family: var(--bs-body-font-family);
     font-size: 1rem;
     font-weight: 400;
@@ -43,17 +43,14 @@ select{
     border-radius: .25rem;
 }
 
-h2{
+.tablaH2{
     font-family: var(--bs-body-font-family);
     color: #003177;
     font-size: 30px;
     text-align: left;
     margin-top: 8px;
 }
-span{
+.spanAncho{
     font-weight: 700;
 }
 
-h2{
-    text-align: center;
-}
