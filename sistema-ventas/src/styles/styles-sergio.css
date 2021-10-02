@@ -1,0 +1,62 @@
+.tsergio table { 
+    border-collapse: collapse;  
+    width: 100%;
+    }
+
+.tsergio { 
+    overflow: hidden; 
+    border: 1px solid #006699;  
+    border-radius: 8px; 
+    margin: 10px; 
+    width: 80%;
+    display: inline-block;
+    
+    }
+
+.tsergio table td, .tsergio table th { 
+    padding: 6px 10px; 
+    border: 1px solid #006699; 
+    width: 100px; 
+    text-align:center; 
+    height: 30px; 
+    }
+
+.tsergio table thead th {
+    background-color:#006699; 
+    color:#FFFFFF;
+    } 
+
+.sombra  { 
+    background: #E1EEF4; 
+    }
+
+.total {
+    background-color: #006699;
+    color: #FFFFFF;
+    }
+
+.estadoventa{
+    width: 25%;
+    display: inline-block
+
+    }
+
+.bsergio{
+    background-color: #006699;color: #FFFFFF;
+    padding: 5PX;
+    border-radius: 10PX;
+    display: block;
+    margin: auto;
+    }
+
+.busqueda{
+    margin: 40px;
+}
+
+.colorborde{
+    border-color: #006699;
+}
+
+.mver{
+    margin-right: 20px;
+}
