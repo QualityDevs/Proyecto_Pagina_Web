@@ -33,8 +33,8 @@ const Sidebar = () => {
 
                     <div class="collapse" id="listVentas" className="lista-desplegable">
                         <div class="list-group">
-                            <li><a href="#" className="sletras"> Registro de Ventas</a></li>
-                            <li><a href="#" className="sletras"> Administrar Ventas</a></li>
+                            <li><a href="/registro_Ventas" className="sletras"> Registro de Ventas</a></li>
+                            <li><a href="/administracion_Ventas" className="sletras"> Administrar Ventas</a></li>
                         </div>
                     </div>
                 </li>

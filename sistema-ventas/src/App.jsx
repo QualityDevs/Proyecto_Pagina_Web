@@ -7,7 +7,7 @@ import  AdministracionVentas  from './pages/administracion_Ventas';
 import  Adminproductos  from './pages/admin_productos';
 import  AdminUsuarios  from './pages/admin_Usuarios';
 import LayoutLogin from './layouts/Layout Login';
-
+import RegistroVentas  from './pages/registro_Ventas';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
 
           </Route>
            
-           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos']} exact>
+           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos', '/registro_Ventas']} exact>
             <Layout>
               <Switch>
 
@@ -40,6 +40,9 @@ function App() {
                   <AdminUsuarios />
                 </Route>
                 
+                <Route path='/registro_Ventas' exact>
+                  <RegistroVentas />
+                </Route>
 
               </Switch>
             </Layout>
