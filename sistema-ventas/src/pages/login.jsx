@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div className="llogin ">
 
-      <h4>
+      <h4 className="titulo">
         Iniciar Sesión
       </h4>
 

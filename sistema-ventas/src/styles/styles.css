@@ -51,12 +51,18 @@ ul{
     margin-bottom: 1%;
 }
 
+.titulo{
+
+    font-style: italic;
+
+}
+
 .llogin{
  
-
+    background-color: aquamarine;
     text-align: center;
-    height: 100vh;
+    height: 90vh;
     display: list-item;
-    margin-top: 30vh;
+    padding-top: 30vh;
     
 }
