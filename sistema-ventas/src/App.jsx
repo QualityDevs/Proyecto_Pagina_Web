@@ -1,26 +1,39 @@
 import './App.css';
 import Layout from './layouts/Layout';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { login } from './pages/login';
-import { admin } from './pages/admin';
-import { administracion_Ventas } from './pages/administracion_Ventas';
+import  Login  from './pages/login';
+import  Admin  from './pages/admin';
+import  AdministracionVentas  from './pages/administracion_Ventas';
+import  Adminproductos  from './pages/admin_productos';
+import  AdminUsuarios  from './pages/admin_Usuarios';
 
 
 function App() {
   return (
     <div className="App">
-     <Router>
+      <Router>
         <Switch>
-          <Layout>
-            <Route path='/login' exact>
-              <login />
+           <Route path={['/admin', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos']} exact>
+            <Layout>
+              <Switch>
 
-            </Route>
+                <Route path='/administracion_Ventas' exact>
+                  <AdministracionVentas />
+                </Route>
 
+                <Route path='/admin_productos' exact>
+                  <Adminproductos />
+                </Route>
 
-          </Layout>
+                <Route path='/admin_Usuarios' exact>
+                  <AdminUsuarios />
+                </Route>
+
+              </Switch>
+            </Layout>
+          </Route>
         </Switch>
-     </Router>
+      </Router>
     </div>
 
   );

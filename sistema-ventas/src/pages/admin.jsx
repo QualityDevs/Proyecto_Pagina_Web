@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const admin = () => {
+const Admin = () => {
     return (
         <div>
             esta es la pagina de admin
         </div>
     )
 }
+
+export default Admin;
