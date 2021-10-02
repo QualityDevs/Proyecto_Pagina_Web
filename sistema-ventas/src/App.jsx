@@ -2,7 +2,7 @@ import './App.css';
 import Layout from './layouts/Layout';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import  Login  from './pages/login';
-import  Admin  from './pages/admin';
+import  Home  from './pages/home';
 import  AdministracionVentas  from './pages/administracion_Ventas';
 import  Adminproductos  from './pages/admin_productos';
 import  AdminUsuarios  from './pages/admin_Usuarios';
@@ -14,15 +14,17 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path={'/login'}>
+        
+          
+        <Route path='/' exact>
               <LayoutLogin>
-                 <Route path='/login'>
+                 <Route path='/login' >
               </Route>
             </LayoutLogin>
 
           </Route>
            
-           <Route path={['/admin', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos']} exact>
+           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos']} exact>
             <Layout>
               <Switch>
 
@@ -38,6 +40,7 @@ function App() {
                   <AdminUsuarios />
                 </Route>
                 
+
               </Switch>
             </Layout>
           </Route>
