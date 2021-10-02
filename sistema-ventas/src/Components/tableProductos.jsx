@@ -2,8 +2,7 @@ import '../styles/stylesp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
 import { Container, Table } from 'react-bootstrap';
-
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -73,7 +72,8 @@ class TableProductosA extends Component {
                                 <th>{elemento.v_unitario}</th>
                                 <th>{elemento.estado}</th>
                                 <th>
-                                    <div><button type="button" class="btn btn-primary">Editar</button>
+                                    <div>
+                                        <Link to="/productos/admin_editar_producto"><button type="button" class="btn btn-primary">Editar</button></Link>
                                         <button type="button" class="btn btn-danger">Eliminar</button></div>
                                 </th>
                             </tr>

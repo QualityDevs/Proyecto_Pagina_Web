@@ -10,7 +10,7 @@ import LayoutLogin from './layouts/Layout Login';
 import RegistroVentas  from './pages/registro_Ventas';
 import Productos from './pages/productos/productos';
 import CrearProducto from './pages/productos/admin_crear_producto';
-
+import EditarProducto from './pages/productos/admin_editar_producto'
 function App() {
   return (
     <div className="App">
@@ -26,7 +26,7 @@ function App() {
 
           </Route>
            
-           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/productos/admin_productos', '/productos/productos', '/productos/admin_crear_producto','/registro_Ventas']} exact>
+           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/productos/admin_productos', '/productos/productos', '/productos/admin_crear_producto','/productos/admin_editar_producto','/registro_Ventas']} exact>
             <Layout>
               <Switch>
 
@@ -44,6 +44,10 @@ function App() {
 
                 <Route path='/productos/admin_crear_producto' exact>
                   <CrearProducto />
+                </Route>
+
+                <Route path='/productos/admin_editar_producto' exact>
+                  <EditarProducto />
                 </Route>
 
                 <Route path='/admin_Usuarios' exact>
