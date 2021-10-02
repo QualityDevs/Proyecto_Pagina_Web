@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-           <Route path={['/admin', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos']} exact>
+           <Route path={['/admin', '/administracion_Ventas', '/admin_Usuarios', '/admin_productos', '/login']} exact>
             <Layout>
               <Switch>
 
@@ -28,7 +28,10 @@ function App() {
                 <Route path='/admin_Usuarios' exact>
                   <AdminUsuarios />
                 </Route>
-
+                
+                <Route path='/login' exact>
+                  <Login/>
+                </Route>
               </Switch>
             </Layout>
           </Route>

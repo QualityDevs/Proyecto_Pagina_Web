@@ -4,19 +4,29 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <div>
+
+            <h4>
+            Iniciar Sesión
+            </h4>
+
             <form >
         <div>
           <input
+            class= 'form'
             type='email'
-            placeholder='dsl@c.com'
+            placeholder='tunombre@tucorreo.com'
             required
           />
+          </div>
+          <div>
           <input
+          
             type='password'
+            placeholder= ' ********'
             required
           />
         </div>
-        <div className='flex justify-between'>
+        <div >
           <div>
             <label htmlFor='recuerdame'>
               <input type='checkbox' name='recuerdame' />
