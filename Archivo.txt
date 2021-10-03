@@ -38,3 +38,4 @@ Administrador de BD: Sergio Andres Villamizar Arias: Tengo 26 años soy tecnolog
 Product Owner: Linda Natalia Rodríguez Rincón: Tengo 31 años, profesional en Relaciones Internacionales, no tenia conocimientos previos sobre programación pero con el objetivo de adquirir nuevas habilidades.
 Analista: Laura Andrea Medina Sánchez: Tengo 23 años soy ingeniera electrónica, antes de estar en el curso de MisiónTIC tenía conocimientos mínimos de programación
 Desarrollador: John Stiven Garcia Vargas: Tengo 22 años soy estudiante de Ingenieria de Sistemas, tengo conocimientos previos en c, c++, java y Dart.
+Scrum Master: Pablo Arturo Rodríguez González: Tengo 21 años soy Estudiante de Ingeniería de Sistemas y mediante mi carrera he obtenido el conocimiento que tengo hoy en día en programación y desarrollo de proyectos y bases de datos
