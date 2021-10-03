@@ -1,11 +1,34 @@
 import '../../styles/stylesp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import { Modal } from 'react-bootstrap';
+import React, { useState } from 'react';
 
- 
+
 const CrearProducto = () => {
+    const [show, popup] = useState(false);
+    const modalOpen = () => popup(true);
+    const modalClose = () => popup(false);
     return (
         <div className="contenedorM" >
+            <div>
+                <Modal show={show} onHide={modalClose}>
+                    <Modal.Header>
+                        <button type="button" class="btn btn-danger" onClick={modalClose}> Cerar</button>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <h6>Producto creado correctamente:</h6>
+                        <ul>
+                            <li>Id:</li>
+                            <li>Nombre:</li>
+                            <li>Descripción:</li>
+                            <li>Valor:</li>
+                            <li>Estado:</li>
+                        </ul>
+                    </Modal.Body>
+                </Modal>   
+            </div>
+            
             <h1> Crear un nuevo producto</h1>
             <form class="form-horizantal">
                 <div class="form-group">
@@ -37,7 +60,7 @@ const CrearProducto = () => {
                 </div>
 
                 <div class="form-group">
-                    <button type="button" class="btn btn-success"> Crear Producto</button>
+                    <button type="button" class="btn btn-success" onClick={modalOpen}> Crear Producto</button>
                 </div>
 
             </form>
