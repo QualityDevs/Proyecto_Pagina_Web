@@ -87,7 +87,10 @@ const RegistroVentas = () => {
                             <th>Total unidades</th>
                         </tr>
                     </thead>
-
+                    <tfoot>
+                        <td className="total" colSpan="4">Total</td>
+                        <td>111</td>
+                    </tfoot>
                     <tbody>
                         <tr>
                             <td></td>
@@ -131,14 +134,6 @@ const RegistroVentas = () => {
                             <td></td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <th className="total">total</th>
-                            <td>1111</td>
-                        </tr>
-
                     </tbody>
                 </table>
             </div>

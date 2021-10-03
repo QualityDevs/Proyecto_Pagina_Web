@@ -18,9 +18,10 @@
   }
   
   table thead {
+    color: white;
     text-align: center;
     vertical-align: middle;
-    background-color: rgb(136, 208, 226);
+    background-color: #006699;
   }
   
   table tbody tr{
