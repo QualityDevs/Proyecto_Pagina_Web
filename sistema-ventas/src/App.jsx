@@ -10,7 +10,9 @@ import LayoutLogin from './layouts/Layout Login';
 import RegistroVentas  from './pages/registro_Ventas';
 import Productos from './pages/productos/productos';
 import CrearProducto from './pages/productos/admin_crear_producto';
-import EditarProducto from './pages/productos/admin_editar_producto'
+import EditarProducto from './pages/productos/admin_editar_producto';
+import ListaUsuarios from './pages/lista_Usuarios';
+import EditarUsuarios from './pages/editar_Usuarios';
 function App() {
   return (
     <div className="App">
@@ -26,7 +28,7 @@ function App() {
 
           </Route>
            
-           <Route path={['/home', '/administracion_Ventas', '/admin_Usuarios', '/productos/admin_productos', '/productos/productos', '/productos/admin_crear_producto','/productos/admin_editar_producto','/registro_Ventas']} exact>
+           <Route path={['/home', '/administracion_Ventas', '/productos/admin_productos', '/productos/productos', '/productos/admin_crear_producto','/productos/admin_editar_producto','/registro_Ventas', '/admin_Usuarios', '/lista_Usuarios', '/editar_Usuarios']} exact>
             <Layout>
               <Switch>
 
@@ -53,7 +55,15 @@ function App() {
                 <Route path='/admin_Usuarios' exact>
                   <AdminUsuarios />
                 </Route>
-                
+
+                <Route path='/lista_Usuarios' exact>
+                  <ListaUsuarios />
+                </Route>
+
+                <Route path='/editar_Usuarios' exact>
+                  <EditarUsuarios />
+                </Route>
+
                 <Route path='/registro_Ventas' exact>
                   <RegistroVentas />
                 </Route>

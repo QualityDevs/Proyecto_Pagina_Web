@@ -47,7 +47,8 @@ const Sidebar = () => {
 
                     <div class="collapse" id="listUsuarios" className="lista-desplegable">
                         <div class="list-group">
-                            <li><a href="/admin_Usuarios" className="sletras"> Gestion de Usuarios</a></li>
+                            <li><a href="/lista_Usuarios" className="sletras"> Lista de Usuarios</a></li>
+                            <li><a href="/admin_Usuarios" className="sletras"> Administar Usuarios</a></li>
                         </div>
                     </div>
 
