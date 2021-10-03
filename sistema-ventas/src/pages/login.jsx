@@ -8,7 +8,7 @@ const Login = () => {
     <div className="llogin ">
 
       <h4 className="titulo">
-        Iniciar Sesión
+        Ingresa
       </h4>
 
       <form >
@@ -16,7 +16,7 @@ const Login = () => {
           <input
             class='form'
             type='email'
-            placeholder='tunombre@tucorreo.com'
+            placeholder='nombre@dominio.com'
             required
           />
         </div>
@@ -35,7 +35,7 @@ const Login = () => {
               Recuerdame
             </label>
           </div>
-          <div>
+          <div className='olvidar'>
             <Link to='/'>¿Olvidaste tu contraseña?</Link>
           </div>
         </div>
@@ -47,7 +47,7 @@ const Login = () => {
         <div>O</div>
         <div>
           <Link to='/home'>
-            <button class= 'border border-danger rounded bg' type='submit ' ><FcGoogle/> Continua con google</button>
+            <button class= 'border border-danger rounded bg' type='submit ' ><FcGoogle/> Continuar con Google</button>
           </Link>
         </div>
       </form>

@@ -64,5 +64,8 @@ ul{
     height: 90vh;
     display: list-item;
     padding-top: 30vh;
-    
+}
+
+.olvidar{
+    padding-bottom: 1vh;
 }
