@@ -1,148 +1,63 @@
-import React from 'react'
+import Button from '@restart/ui/esm/Button';
+import React, { state } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/styles-sergio.css'
 
+
+const data = [{ id: "001", fecha: "12/01/2021", unidades: "20", responsable: "Juan Martinez", totalv: "500.000", estado: "En proceso" }]
+
+
 const RegistroVentas = () => {
+
     return (
         <div>
-            <div className="tsergio estadoventa" >
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Estado de venta</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-
+            <div style={{padding:12}}>
+                <Link to="/crear_venta"><button type="button" class="btn btn-success">CREAR VENTA</button></Link>
             </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="busqueda" class="labels" >Buscar por:  </label>
+                    <select class="form-control form-control" className='colorborde'>
+                        <option>ID venta</option>
+                        <option>Docuento cliente</option>
+                        <option>Nombre cliente</option>
+                    </select>
+                    <input type="search" className='colorborde' />
+                    <Button type="button" className="colorborde"> BUSCAR</Button>
+                </div>
+            </form>
+
 
             <div className="tsergio">
                 <table>
                     <thead>
                         <tr>
-                        <th>ID Venta</th>
-                        <th>Fecha pedido</th>
-                        <th>Hora</th>
+                            <th>ID VENTA</th>
+                            <th>FECHA </th>
+                            <th>UNIDADES</th>
+                            <th>RESPONSABLE</th>
+                            <th>TOTAL VENTA</th>
+                            <th>ESTADO</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        </tr>
+                        {
+                            data.map((elemento) => (
+                                <tr>
+                                    <td>{elemento.id}</td>
+                                    <td>{elemento.fecha}</td>
+                                    <td>{elemento.unidades}</td>
+                                    <td>{elemento.responsable}</td>
+                                    <td>{elemento.totalv}</td>
+                                    <td>{elemento.estado}</td>
+                                </tr>
+                            ))}
                     </tbody>
                 </table>
             </div>
 
-            
-            <div className="tsergio">
-                <table>
-                    <thead>
-                        <tr>
-                        <th>Cliente</th> 
-                        <th>Docuento de identidad</th> 
-                        <th>Responsable</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td>001</td>
-                            <td>1111111111</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <form className='fsergio'>
-
-                Agregar por:<select className='colorborde'>
-                <option >ID producto</option>
-                <option>Nombre producto</option>
-                </select>
-
-                <input type="search" className='colorborde' />
-                Unidades <input type="number" className='colorborde' />
-                <input type="submit" value="agregar" className='colorborde'/>
-
-                
-                </form>
-                
-            <div className="tsergio">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID productos</th>
-                            <th>Nombre producto</th>
-                            <th>Unidades</th>
-                            <th>Precio unidad</th>
-                            <th>Total unidades</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <td className="total" colSpan="4">Total</td>
-                        <td>111</td>
-                    </tfoot>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr className="sombra">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr className="sombra">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr className="sombra">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-           
-
-            <button type="submit" className="bsergio">Crear venta</button>
         </div>
-    )
+    );
 }
 
 export default RegistroVentas;

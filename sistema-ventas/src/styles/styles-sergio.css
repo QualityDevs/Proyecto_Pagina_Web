@@ -49,8 +49,15 @@
     margin: auto;
     }
 
-.busqueda{
-    margin: 40px;
+.labels{
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+      
+.form-group{
+    padding: 1rem 40rem;
+    display: block;
+    justify-content: space-between;
 }
 
 .colorborde{
