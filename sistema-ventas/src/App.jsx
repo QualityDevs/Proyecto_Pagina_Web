@@ -13,6 +13,7 @@ import ListaUsuarios from './pages/lista_Usuarios';
 import EditarUsuarios from './pages/editar_Usuarios';
 import CrearVenta from './pages/crear_venta';
 import EditarVenta from './pages/editar_venta';
+import { Auth0Provider } from "@auth0/auth0-react"; 
 
 function App() {
   return (
@@ -84,6 +85,8 @@ function App() {
     </div>
 
   );
+
+
 }
 
 export default App;

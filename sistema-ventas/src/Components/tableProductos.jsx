@@ -95,6 +95,8 @@ export {
     TableProductosA
 }
 
+//cambios para conectar tabla productos con backend
+
 const TablaVehiculos = ({ listaVehiculos, setEjecutarConsulta }) => {
     const [busqueda, setBusqueda] = useState('');
     const [vehiculosFiltrados, setVehiculosFiltrados] = useState(listaVehiculos);
