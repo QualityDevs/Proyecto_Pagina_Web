@@ -11,7 +11,7 @@ const CrearProducto = () => {
     const modalClose = () => popup(false);
     const [nombre, setNombre] = useState("");
     const [descripcion, setDescripcion] = useState("");
-    const [vunitario, setVUnitario] = useState(null);
+    const [vunitario, setVUnitario] = useState(0);
     const [estado, setEstado]= useState("Disponible");
     const [mensaje, setMensaje] = useState("");
 
@@ -42,10 +42,12 @@ const CrearProducto = () => {
     }
 
     const comprobar = () => {
-        if (vunitario.valueOf() > 0 && nombre.toString().length > 0)
+        if (vunitario.valueOf() > 0 && nombre.toString().length > 0 && descripcion.toString().length > 0 &&
+            estado.toString().length > 0) 
         return true;
         console.log(nombre);
-        setMensaje("Debe llenar todos los campos y valor no del producto debe ser mayor");
+        setMensaje(<div><p>Debe llenar todos los campos </p>
+                    <p>El Valor no del producto debe ser mayor que a 0</p></div>);
         modalOpen();
         return false;
     }
@@ -55,7 +57,8 @@ const CrearProducto = () => {
             <div>
                 <Modal show={show} onHide={modalClose}>
                     <Modal.Header>
-                        <button type="button" class="btn btn-danger" onClick={modalClose}> Cerar</button>
+                        <h4>Información</h4>
+                        <button type="button" class="btn btn-danger" onClick={modalClose}> Cerrar</button>
                     </Modal.Header>
                     <Modal.Body>
                        <div>{mensaje}</div>
