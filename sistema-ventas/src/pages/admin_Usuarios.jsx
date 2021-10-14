@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/stylesc.css';
+import axios from 'axios';
 
 const AdminUsuarios = () => {
+    const [state, setState] = useState({datos: []});
+
+    const getUsuarios = async () => {
+        const options = {
+            method: 'GET',
+            url: 'http://localhost:5000/users'
+        };
+        
+            await axios.request(options).then((response) => {
+            setState({datos: response.data})
+            }).catch(function (error){
+            console.error(error);
+        });
+    };
+    getUsuarios();
+
     return (
         <div className="container"> 
         <div className="item item-1">
@@ -20,83 +38,19 @@ const AdminUsuarios = () => {
             </tr>
             </thead>
             <tbody>
+            { state.datos.map((elemento)=>(
             <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Abella Herrera William Efrain</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
+                <td className="tablatd">{elemento._id}</td> 
+                <td className="tablatd">{elemento.nombre}</td>
+                <td className="tablatd">{elemento.estado}</td> 
+                <td className="tablatd">{elemento.rol}</td>
                 <td className="tablatd centro">
-                    <a href="/editar_Usuarios">
-                        <button type="button" className="btn btn-primary">Editar</button>
-                    </a>
+                    <div>
+                    <Link to={{pathname:"/editar_Usuarios/", state: elemento }}><button type="button" className="btn btn-primary">Editar</button></Link>
+                    </div>
                 </td>
             </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Alegria Fernandez Diego Alonso</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-                <td className="tablatd centro">
-                    <a href="/editar_Usuarios">
-                        <button type="button" className="btn btn-primary">Editar</button>
-                    </a>
-                </td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Arenas De Escobar Maria Margoth</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-                <td className="tablatd centro">
-                    <a href="/editar_Usuarios">
-                        <button type="button" className="btn btn-primary">Editar</button>
-                    </a>
-                </td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Cabrera Leyton Hernando</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-                <td className="tablatd centro">
-                    <a href="/editar_Usuarios">
-                        <button type="button" className="btn btn-primary">Editar</button>
-                    </a>
-                </td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Egas Realpe Mauro Alberto</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-                <td className="tablatd centro">
-                    <a href="/editar_Usuarios">
-                        <button type="button" className="btn btn-primary">Editar</button>
-                    </a>
-                </td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Grijalba Gomez Pedro Felipe</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-                <td className="tablatd centro">
-                    <a href="/editar_Usuarios">
-                        <button type="button" className="btn btn-primary">Editar</button>
-                    </a>
-                </td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Hidalgo Otero Ana Liliana</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-                <td className="tablatd centro">
-                    <a href="/editar_Usuarios">
-                        <button type="button" className="btn btn-primary">Editar</button>
-                    </a>
-                </td>
-            </tr>
+            ))}
             </tbody>
             </table>
             </form>

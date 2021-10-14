@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react';
 import '../styles/stylesc.css';
+import axios from 'axios';
 
 const ListaUsuarios = () => {
+
+    const [state, setState] = useState({datos: []});
+    const getUsuarios = async () => {
+        const options = {
+            method: 'GET',
+            url: 'http://localhost:5000/users'
+        };
+        
+            await axios.request(options).then((response) => {
+            setState({datos: response.data})
+            }).catch(function (error){
+            console.error(error);
+        });
+    };
+    getUsuarios();
+
     return (
         <div className="container"> 
         <div className="item item-1">
@@ -19,53 +36,18 @@ const ListaUsuarios = () => {
             </tr>
             </thead>
             <tbody>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Abella Herrera William Efrain</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
+                { state.datos.map((elemento)=>(
+                    <tr> 
+                <td className="tablatd">{elemento._id}</td> 
+                <td className="tablatd">{elemento.nombre}</td>
+                <td className="tablatd">{elemento.estado}</td> 
+                <td className="tablatd">{elemento.rol}</td>
             </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Alegria Fernandez Diego Alonso</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Arenas De Escobar Maria Margoth</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Cabrera Leyton Hernando</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Egas Realpe Mauro Alberto</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Grijalba Gomez Pedro Felipe</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-            </tr>
-            <tr> 
-                <td className="tablatd">1234567899</td> 
-                <td className="tablatd">Hidalgo Otero Ana Liliana</td>
-                <td className="tablatd">Pendiente</td> 
-                <td className="tablatd">Vendedor</td>
-            </tr>
+            ))}
             </tbody>
             </table>
             </form>
             </div> 
-
         </div>
     )
 }

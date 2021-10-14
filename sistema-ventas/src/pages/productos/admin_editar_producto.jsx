@@ -57,7 +57,6 @@ const EditarProducto = () => {
             </div>
             <h1> Editar producto</h1>
             <Form >
-
                 <Form.Group class="form-group">
                     <Form.Label for="n_producto" class="labels">Nombre del producto</Form.Label>
                     <input type="text" class="form-control" value={nombre} onChange={(value) => setNombre(value.target.value)} id="n_producto" placeholder="Ingrese el nombre del producto" />
