@@ -3,15 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { Modal } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation} from 'react-router';
 import { Form } from 'react-bootstrap';
 import axios from 'axios';
+import { useHistory } from 'react-router';
+
+
 
 const EditarProducto = () => {
     let location = useLocation();
+    let history = useHistory();
     const [show, popup] = useState(false);
-    const modalOpen = () => popup(true);
-    const modalClose = () => popup(false);
+    const modalOpen = () => {popup(true)};
+    const modalClose = () => { popup(false)};
     const [nombre, setNombre] = useState("");
     const [mensaje, setMensaje] = useState("");
     const [descripcion, setDescripcion] = useState("");
@@ -24,7 +28,7 @@ const EditarProducto = () => {
         setDescripcion(location.state.descripcion);
         setVUnitario(parseInt(location.state.vunitario));
         setEstado(location.state.estado);
-    },[]);
+    }, []);
 
     const cambiarDB = async () => {
         const options = {
@@ -35,12 +39,18 @@ const EditarProducto = () => {
         }
         console.log(options.data);
         await axios.request(options).then((response) => {
+            setNombre("");
+            setDescripcion("");
+            setVUnitario(0);
+            setEstado("Disponible");
             setMensaje("Producto modificado correctamente");
-             modalOpen();
+            modalOpen();
+            setTimeout(function(){history.push('/productos/admin_productos')},5000);
         }).catch(function (err) {
             setMensaje(err.toString());
             modalOpen();
         });
+        
     }
 
     return (
@@ -57,7 +67,6 @@ const EditarProducto = () => {
             </div>
             <h1> Editar producto</h1>
             <Form >
-
                 <Form.Group class="form-group">
                     <Form.Label for="n_producto" class="labels">Nombre del producto</Form.Label>
                     <input type="text" class="form-control" value={nombre} onChange={(value) => setNombre(value.target.value)} id="n_producto" placeholder="Ingrese el nombre del producto" />

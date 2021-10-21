@@ -1,5 +1,5 @@
 import React from 'react'
-import {TableProductos} from '../../Components/tableProductos';
+import {TableProductos} from './tableProductos.jsx';
 const Productos = () => {
     return (
         <div style={{padding:50}} >
