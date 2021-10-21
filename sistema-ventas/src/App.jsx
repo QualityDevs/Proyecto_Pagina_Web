@@ -49,7 +49,7 @@ function App() {
                   <CrearProducto />
                 </Route>
 
-                <Route path='/productos/admin_editar_producto' exact>
+                <Route path='/productos/admin_editar_producto'>
                   <EditarProducto />
                 </Route>
 
