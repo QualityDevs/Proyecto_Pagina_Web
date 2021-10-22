@@ -19,7 +19,6 @@ const CrearVenta = () => {
                     <Modal.Body>
                         <h6>Venta Creada correctamente:</h6>
                         <ul>
-                            <li>Id:</li>
                             <li>Fecha:</li>
                             <li>Estado:</li>
                             <li>Responsable:</li>
@@ -31,16 +30,21 @@ const CrearVenta = () => {
                 </Modal>
             </div>
 
-            <div className="tsergio estadoventa" >
+     
+            <div className="tsergio">
                 <table>
                     <thead>
                         <tr>
-                            <th>ESTADO VENTA</th>
+                            <th>FECHA PEDIDO</th>
+                            <th>HORA</th>
+                            <th>ESTADO DE LA VENTA</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
+                            <td><input></input></td>
+                            <td><input></input></td>
                             <td>
                                 <select>
                                     <option>En proceso</option>
@@ -48,27 +52,6 @@ const CrearVenta = () => {
                                     <option>Entregada</option>
                                 </select>
                             </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
-            <div className="tsergio">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID VENTA</th>
-                            <th>FECHA PEDIDO</th>
-                            <th>HORA</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td><input></input></td>
-                            <td><input></input></td>
-                            <td><input></input></td>
                         </tr>
                     </tbody>
                 </table>
@@ -135,56 +118,7 @@ const CrearVenta = () => {
                                 <button type="button" class="btn btn-danger">Eliminar</button>
                             </td>
                         </tr>
-                        <tr className="sombra">
-                            <td></td>
-                            <td></td>
-                            <td><input></input></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td><input></input></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr className="sombra">
-                            <td></td>
-                            <td></td>
-                            <td><input></input></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td><input></input></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr className="sombra">
-                            <td></td>
-                            <td></td>
-                            <td><input></input></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </td>
-                        </tr>
+                       
                     </tbody>
                 </table>
             </div>
