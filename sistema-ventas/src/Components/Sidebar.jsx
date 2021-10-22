@@ -5,10 +5,14 @@ import { FiLogOut } from "react-icons/fi";
 import { FiChevronDown } from "react-icons/fi"
 import { RiUserSettingsLine } from "react-icons/ri"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js';
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 const Sidebar = () => {
+
+    const { logout } = useAuth0();
+
     return (
         <div class="collapse" id="navbarToggleExternalContent" className="sidebar">
             <ul>
@@ -55,7 +59,7 @@ const Sidebar = () => {
                 </li>
 
                 <li>
-                    <button class="navbar-toggler" type="button">
+                    <button onClick={() => logout({ returnTo: window.location.origin })} class="navbar-toggler" type="button">
                     <FiLogOut className="boton" /><a href="#" className="sletra"> Salir</a>
                     </button>
                 </li>

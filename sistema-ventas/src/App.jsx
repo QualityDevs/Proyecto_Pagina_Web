@@ -17,7 +17,12 @@ import { Auth0Provider } from "@auth0/auth0-react";
 
 function App() {
   return (
-    <div className="App">
+   <Auth0Provider
+     domain="autenticacionmintic.us.auth0.com"
+    clientId="ljdxTywVaa7tVPkdZgyes5iITCjFehoO"
+    redirectUri={window.location.origin}
+   >
+   <div className="App">
       <Router>
         <Switch>
 
@@ -83,7 +88,7 @@ function App() {
         </Switch>
       </Router>
     </div>
-
+    </Auth0Provider>
   );
 
 
