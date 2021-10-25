@@ -1,26 +1,43 @@
 import Button from '@restart/ui/esm/Button';
-import React, { state } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/styles-sergio.css'
-
-
-const data = [{ id: "001", fecha: "12/01/2021", unidades: "20", responsable: "Juan Martinez", totalv: "500.000", estado: "Espera" }]
-
+import axios from 'axios';
+import { eliminarVenta } from '../utils/api';
+import { useHistory } from 'react-router';
 
 const AdministracionVentas = () => {
+    const [ventas, setVentas]= useState([]);
+    const [ventasf, setVentasf] = useState([]);
 
+    const buscar = (valor) => {
+        setVentasf(ventas.filter((elemento) => {
+            return JSON.stringify(elemento).toLowerCase().includes(valor);
+        }))
+      }
+
+
+    let history = useHistory();
+
+    useEffect(async () => {
+        const options = {
+            method: 'GET',
+            url: 'http://localhost:5000/sales'
+        };
+    
+        await axios.request(options).then((response) => {
+            setVentas(response.data);
+            setVentasf(response.data);
+        }).catch(function (error) {
+            console.error(error);
+        });
+    }, []);
     return (
         <div>
             <form class="form-horizontal">
                 <div class="form-group">
                     <label for="busqueda" class="labels" >Buscar por:  </label>
-                    <select class="form-control form-control" className='colorborde'>
-                        <option>ID venta</option>
-                        <option>Docuento cliente</option>
-                        <option>Nombre cliente</option>
-                    </select>
-                    <input type="search" className='colorborde' />
-                    <Button type="button" className="colorborde"> BUSCAR</Button>
+                    <input className='colorborde'  onChange={(e) => buscar(e.target.value.toLocaleLowerCase())}/>
                 </div>
             </form>
 
@@ -40,18 +57,18 @@ const AdministracionVentas = () => {
                     </thead>
                     <tbody>
                         {
-                            data.map((elemento) => (
+                            ventasf.map((elemento) => (
                                 <tr>
-                                    <td>{elemento.id}</td>
+                                    <td>{elemento._id}</td>
                                     <td>{elemento.fecha}</td>
                                     <td>{elemento.unidades}</td>
                                     <td>{elemento.responsable}</td>
-                                    <td>{elemento.totalv}</td>
+                                    <td>{new Intl.NumberFormat().format(elemento.total)}</td>
                                     <td>{elemento.estado}</td>
                                     <td>
                                     <div>
                                     <Link to="/editar_venta"><button type="button" class="btn btn-primary">Ver</button></Link>
-                                    <button type="button" class="btn btn-danger">Eliminar</button>
+                                    <button type="button" class="btn btn-danger" onClick={() => {eliminarVenta(elemento._id); history.push('/administracion_Ventas')}}>Eliminar</button>
                                     </div>
                                     </td>
                                 </tr>

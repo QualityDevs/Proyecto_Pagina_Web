@@ -14,3 +14,18 @@ export const eliminarProducto = async (id) =>{
         console.error(err);
     })
 }
+
+export const eliminarVenta = async (id) =>{
+    const options= {
+        method: 'DELETE',
+        url: 'http://localhost:5000/sales/delete',
+        headers: { 'Content-Type': 'application/json'},
+        data : {id: id}
+    }
+
+    await axios.request(options).then(()=>{
+       console.log("Eliminado correctamente");
+    }).catch(function(err){
+        console.error(err);
+    })
+}

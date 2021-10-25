@@ -3,11 +3,33 @@
     width: 100%;
     }
 
+form{
+     padding: 1rem 20rem;
+}
+
+form > label{
+    padding: 0rem 2rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form > select{
+    margin: 2rem;
+    padding-inline-end: 2rem;
+    font-size: 20px;
+}
+
+form > input{
+    font-size: 20px;
+    margin-inline-end: 2rem;
+}
+
+
+
 .tsergio { 
     overflow: hidden; 
     border: 1px solid #006699;  
-     
-    margin: 10px; 
+    margin: 30px; 
     width: 80%;
     display: inline-block;
     

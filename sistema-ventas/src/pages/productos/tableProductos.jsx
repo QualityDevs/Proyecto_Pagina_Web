@@ -48,7 +48,7 @@ class TableProductos extends Component {
         <div style={{ padding: 20 }}>
           <Form.Group as={Row} >
             <Form.Label column sm="2">Valor de Busqueda</Form.Label>
-            <Col sm="10">
+            <Col sm="5">
               <Form.Control class="form-control" type="text" onChange={(dato) => { this.buscar(dato.target.value.toLocaleLowerCase()) }} />
             </Col>
           </Form.Group>

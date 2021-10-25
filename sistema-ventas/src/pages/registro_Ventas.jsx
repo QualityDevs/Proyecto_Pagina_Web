@@ -1,29 +1,48 @@
 import Button from '@restart/ui/esm/Button';
-import React, { state } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/styles-sergio.css'
+import '../styles/styles-sergio.css';
+import axios from 'axios';
 
 
-const data = [{ id: "001", fecha: "12/01/2021", unidades: "20", responsable: "Juan Martinez", totalv: "500.000", estado: "En proceso" }]
+
+
 
 
 const RegistroVentas = () => {
+    const [ventas, setVentas] = useState([]);
+    const [ventasf, setVentasf] = useState([]);
+
+    const buscar = (valor) => {
+        setVentasf(ventas.filter((elemento) => {
+            return JSON.stringify(elemento).toLowerCase().includes(valor);
+        }))
+      }
+
+    useEffect(async () => {
+        const options = {
+            method: 'GET',
+            url: 'http://localhost:5000/sales'
+        };
+
+        await axios.request(options).then((response) => {
+            setVentas(response.data);
+            setVentasf(response.data);
+        }).catch(function (error) {
+            console.error(error);
+        });
+    }, []);
 
     return (
         <div>
-            <div style={{padding:12}}>
+            <div style={{ padding: 12 }}>
                 <Link to="/crear_venta"><button type="button" class="btn btn-success">CREAR VENTA</button></Link>
             </div>
             <form class="form-horizontal">
                 <div class="form-group">
                     <label for="busqueda" class="labels" >Buscar por:  </label>
-                    <select class="form-control form-control" className='colorborde'>
-                        <option>ID venta</option>
-                        <option>Docuento cliente</option>
-                        <option>Nombre cliente</option>
-                    </select>
-                    <input type="search" className='colorborde' />
-                    <Button type="button" className="colorborde"> BUSCAR</Button>
+                    <input className='colorborde' onChange={(e) => buscar(e.target.value.toLocaleLowerCase())}/>
+            
                 </div>
             </form>
 
@@ -42,13 +61,13 @@ const RegistroVentas = () => {
                     </thead>
                     <tbody>
                         {
-                            data.map((elemento) => (
+                            ventasf.map((elemento) => (
                                 <tr>
-                                    <td>{elemento.id}</td>
+                                    <td>{elemento._id}</td>
                                     <td>{elemento.fecha}</td>
                                     <td>{elemento.unidades}</td>
                                     <td>{elemento.responsable}</td>
-                                    <td>{elemento.totalv}</td>
+                                    <td>{new Intl.NumberFormat().format(elemento.total)}</td>
                                     <td>{elemento.estado}</td>
                                 </tr>
                             ))}
